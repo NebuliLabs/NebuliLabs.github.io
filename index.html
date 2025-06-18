@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebuli Labs - Github</title>
+    <style>
+        /* Dark Mode Styling */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Dark background */
+            color: #fff; /* Light text */
+        }
+
+        .profile-container {
+            width: 90%;
+            max-width: 980px;
+            margin: 20px auto;
+            background-color: #1e1e1e; /* Darker container background */
+            border: 1px solid #333; /* Darker border */
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .profile-header {
+            display: flex;
+            padding: 20px;
+            border-bottom: 1px solid #333; /* Darker border */
+        }
+
+        .profile-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            flex-grow: 1;
+        }
+
+        .profile-name {
+            font-size: 1.8em;
+            margin: 0;
+        }
+
+        .profile-username {
+            color: #aaa; /* Lighter username color */
+            margin-top: 5px;
+        }
+
+        .profile-bio {
+            margin-top: 10px;
+        }
+
+        .profile-actions {
+            margin-top: 15px;
+        }
+
+        .profile-actions button {
+            background-color: #333; /* Darker button background */
+            border: 1px solid #555; /* Darker button border */
+            color: #fff; /* Light button text */
+            padding: 5px 10px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .profile-nav {
+            background-color: #252525; /* Darker nav background */
+            border-bottom: 1px solid #333; /* Darker border */
+        }
+
+        .profile-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .profile-nav li a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #aaa; /* Lighter link color */
+            cursor: pointer;
+        }
+
+        .profile-nav li a.active {
+            border-bottom: 2px solid #007bff; /* Highlight color */
+            color: #fff; /* Active link text */
+        }
+
+        .profile-content {
+            padding: 20px;
+        }
+
+        .tab-section {
+            display: none;
+        }
+
+        .tab-section.active {
+            display: block;
+        }
+
+        a {
+            color: #007bff; /* Link color */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        /* Add more styling to match desired profile page */
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <img src="https://styles.redditmedia.com/t5_7ohkel/styles/profileIcon_gw15570u45ne1.jpeg?width=256&height=256&frame=1&auto=webp&crop=&s=dd3bfc69502214f2e74765cc915807c205afde71" alt="Your Avatar">
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">Aquanix</h1>
+                <div class="profile-username">@nebulilabs</div>
+                <div class="profile-bio">
+                    A guy who codes ig
+                </div>
+                <div class="profile-actions">
+                    <button onclick="window.location.href='https://github.com/NebuliLabs'">Real Github</button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="profile-nav">
+            <ul>
+                <li><a href="https://example.com" data-tab="overview" class="active">Overview</a></li>
+                <li><a href="https://example.com" data-tab="old-testament">Old Testament</a></li>
+                <li><a href="https://example.com" data-tab="new-testament">New Testament</a></li>
+            </ul>
+        </nav>
+
+        <div class="profile-content">
+
+            <div id="overview" class="tab-section active">
+                <p>So the Old Testament is like the Github Repositories I would make back when I like bypassed parental controls and school controls and stuff but the New Testament is stuff after my transition, which is mostly just like little projects and whatnot.</p>
+            </div>
+
+            <div id="old-testament" class="tab-section">
+                <ul>
+                    <li><a href="https://nebulilabs.github.io/NebuliOS/">NebuliOS</a></li>
+                    <li><a href="https://nebulilabs.github.io/Ishna/">Ishna</a></li>
+                    <li><a href="https://nebulilabs.github.io/ExtHanger/">ExtHanger</a></li>
+                    <li><a href="https://nebulilabs.github.io/cyn0/">cyn0</a></li>
+                </ul>
+            </div>
+
+            <div id="new-testament" class="tab-section">
+                <ul>
+                    <li><a href="https://nebulilabs.github.io/Music/">Music</a></li>
+                    <li><a href="https://nebulilabs.github.io/Calck/">Calculator</a></li>
+                    <li><a href="https://nebulilabs.github.io/gmail/">Gmail</a></li>
+                    <li><a href="https://nebulilabs.github.io/Mynd/">Mynd AI</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const tabLinks = document.querySelectorAll('.profile-nav li a');
+        const tabSections = document.querySelectorAll('.tab-section');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent the default link behavior
+
+                // Remove active class from all links and sections
+                tabLinks.forEach(link => link.classList.remove('active'));
+                tabSections.forEach(section => section.classList.remove('active'));
+
+                // Add active class to the clicked link and corresponding section
+                link.classList.add('active');
+                const tabId = link.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+    </script>
+
+</body>
+</html>
