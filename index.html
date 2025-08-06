@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aquanix / Nebuli Labs</title>
+  <title>Nebuli Labs</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
 
@@ -89,11 +89,11 @@
 
     <div class="card">
       <img src="https://avatars.githubusercontent.com/u/68292357?v=4" alt="Profile Picture" />
-      <div class="username">Aquanix / Nebuli Labs</div>
+      <div class="username">NebuLord (Nebuli Labs)</div>
       <div class="bio">
-        I go by Aquanix (Aqua) or Nebuli Labs. I love all of the shows that you can see in the background
+        I go by NebuLord (you can call me Aqua if you want). I love all of the shows that you can see in the background
         <a href="https://nebulilabs.github.io/33b9a3fe-8b50-4209-b258-8e793998a051.png" target="_blank" style="color:#a259ff;text-decoration:underline;">(full image)</a>
-        and I specialize in the main 3: HTML, CSS &amp; JS.
+        and I specialize in the main 3: HTML, CSS & JS.
       </div>
     </div>
 
@@ -101,9 +101,10 @@
       <select id="repoSelect">
         <option value="Nebuli OS">Nebuli OS</option>
         <option value="Calck">Calculator</option>
-        <option value="Music">Music Player</option>
+        <option value="Music">Nebuli Music</option>
         <option value="Mynd">Mynd AI</option>
         <option value="cyn0">Cyno's Arcade</option>
+        <option value="RSO">RSO Sites</option>
       </select>
 
       <h3 class="repo-title" id="repoTitle">Nebuli OS</h3>
@@ -136,21 +137,28 @@
       "Music": {
         title: "Music Player",
         desc: "A sleek & fast music player that incudes Playlist funtionality.",
-        open: "https://nebulilabs.github.io/Music/",
-        source: "https://github.com/nebulilabs/Music"
+        open: "https://nebulilabs.github.io/NebuliOS/musicplayer.html",
+        source: "https://github.com/NebuliLabs/NebuliOS/blob/main/musicplayer.html"
       },
       "Mynd": {
         title: "Mynd AI",
         desc: "A fully HTML Artificial Intelligence open for anyones use",
-        open: "https://nebulilabs.github.io/Mynd/",
-        source: "https://github.com/nebulilabs/Mynd"
+        open: "https://nebulilabs.github.io/NebuliOS/mynd_ai.html",
+        source: "https://github.com/NebuliLabs/NebuliOS/blob/main/mynd_ai.html"
       },
       "cyn0": {
         title: "Cyno's Arcade",
         desc: "750+ Games, all HTML powered.",
         open: "https://nebulilabs.github.io/cyn0/",
         source: "https://github.com/nebulilabs/cyn0"
+      },
+      "RSO": {
+        title: "RSO Sites",
+        desc: "My submissions to the RSO challenges.",
+        open: "https://nebulilabs.github.io/RSO/",
+        source: "https://github.com/nebulilabs/RSO"
       }
+
     };
 
     const select   = document.getElementById('repoSelect');
@@ -171,7 +179,6 @@
       updateRepoDetails(select.value);
     });
 
-    // Initialize with first repo's details
     updateRepoDetails(select.value);
   </script>
 </body>
