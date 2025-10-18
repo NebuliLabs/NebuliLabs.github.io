@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nebuli Labs</title>
+  <title>| NebuLord / callmeaqua |</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
 
@@ -11,7 +11,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Kanit', sans-serif;
-      background: url('https://nebulilabs.github.io/33b9a3fe-8b50-4209-b258-8e793998a051.png') no-repeat center center fixed;
+      background: url('https://assets.nebulilabs.xyz/bio_bg.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
       min-height: 100vh;
@@ -26,6 +26,7 @@
       gap: 30px;
       flex-wrap: wrap;
       max-width: 900px;
+      align-items: flex-start;
     }
 
     .card {
@@ -40,6 +41,20 @@
       align-items: center;
     }
 
+    .projects-wrapper {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project-card {
+        background: rgba(20, 20, 20, 0.75);
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
     .card img {
       width: 100px;
       height: 100px;
@@ -50,13 +65,10 @@
 
     .username { font-size: 1.3rem; font-weight: 600; margin-bottom: 10px; text-align: center; }
     .bio      { font-size: 0.95rem; text-align: center; color: #ccc; }
+    .repo-title { font-size: 1.1rem; margin-bottom: 5px; }
+    .repo-desc  { font-size: 0.85rem; color: #ccc; margin-bottom: 10px; }
 
-    .repo-wrapper { width: 300px; }
-
-    .repo-title { margin-bottom: 10px; text-align: center; }
-    .repo-desc  { font-size: 0.9rem; color: #ccc; text-align: center; }
-
-    .btn-group { margin-top: 15px; display: flex; gap: 10px; }
+    .btn-group { margin-top: 10px; display: flex; gap: 10px; justify-content: center; }
     .btn {
       padding: 6px 12px;
       background: #a259ff;
@@ -68,118 +80,81 @@
     }
     .btn:hover { background: #b47bff; }
 
-    select {
-      margin-bottom: 20px;
-      width: 100%;
-      padding: 8px 10px;
-      border-radius: 8px;
-      background: rgba(255,255,255,0.06);
-      color: #000;
-      border: 1px solid #555;
-      font-family: inherit;
-      font-size: 0.9rem;
-      backdrop-filter: blur(4px);
+    .specialties-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 15px;
+        font-size: 0.9rem;
+    }
+    .specialty-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-weight: 600;
     }
 
-    @media (max-width: 640px) { .card, .repo-wrapper { width: 100%; } }
+    @media (max-width: 640px) {
+        .card, .projects-wrapper { width: 100%; }
+        .container { flex-direction: column; gap: 20px; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
 
     <div class="card">
-      <img src="https://avatars.githubusercontent.com/u/68292357?v=4" alt="Profile Picture" />
-      <div class="username">NebuLord (Nebuli Labs)</div>
+      <img src="https://assets.nebulilabs.xyz/nl_home/nebulord_pfp.png" alt="NebuLord Profile Picture" />
+      <div class="username">NebuLord (callmeaqua)</div>
       <div class="bio">
-        I go by NebuLord (you can call me Aqua if you want). I love all of the shows that you can see in the background
-        <a href="https://nebulilabs.github.io/33b9a3fe-8b50-4209-b258-8e793998a051.png" target="_blank" style="color:#a259ff;text-decoration:underline;">(full image)</a>
-        and I specialize in the main 3: HTML, CSS & JS.
+        Hi 👋 I'm NebuLord (you can call me Aqua if you want). I am the owner & founder of <a href="https://nebulilabs.github.io/33b9a3fe-8b50-4209-b258-8e793998a051.png" target="_blank" style="color:#a259ff;text-decoration:underline;">Nebuli Labs</a>, and you can find Nebuli Labs and my personal projects on the right and my coding specialties below.
+        </div>
+
+      <h3 style="margin-top: 20px; margin-bottom: 10px;">My Specialties</h3>
+      <div class="specialties-list">
+        <span class="specialty-item">HTML</span>
+        <span class="specialty-item">CSS</span>
+        <span class="specialty-item">JavaScript (JS)</span>
+        <span class="specialty-item">Node.js</span>
       </div>
     </div>
 
-    <div class="repo-wrapper card" id="repoCard">
-      <select id="repoSelect">
-        <option value="Nebuli OS">Nebuli OS</option>
-        <option value="Calck">Calculator</option>
-        <option value="Music">Nebuli Music</option>
-        <option value="Mynd">Mynd AI</option>
-        <option value="arcade">Nebuli Arcade</option>
-        <option value="RSO">RSO Sites</option>
-      </select>
+    <div class="projects-wrapper">
+        <div class="project-card">
+            <h4 class="repo-title">NebuliOS</h4>
+            <p class="repo-desc">A sleek, clean, fully html webOS powered by Ultraviolet, which includes 750+ games, a variety of tools, and more.</p>
+            <div class="btn-group">
+                <a href="https://os.nebulilabs.xyz" target="_blank" class="btn">Launch</a>
+                <a href="https://github.com/NebuliLabs-OS/NebuliLabs-OS.github.io" target="_blank" class="btn">Source</a>
+            </div>
+        </div>
 
-      <h3 class="repo-title" id="repoTitle">Nebuli OS</h3>
-      <p  class="repo-desc"  id="repoDesc">
-        Your future OS—fast, fluid, futuristic. Open source, cloud‑ready, under your control.
-      </p>
+        <div class="project-card">
+            <h4 class="repo-title">QZ-star</h4>
+            <p class="repo-desc">A minimalist proxy site powered by Ultraviolet, big enough to be your #1 proxy, small enough to not be detected.</p>
+            <div class="btn-group">
+                <a href="#" target="_blank" class="btn">Launch</a>
+                <a href="#" target="_blank" class="btn">Source</a>
+            </div>
+        </div>
 
-      <div class="btn-group">
-        <a href="https://example.com/open/nebulios" target="_blank" class="btn" id="btnOpen">Open</a>
-        <a href="https://github.com/nebulilabs/nebulios" target="_blank" class="btn" id="btnSource">Source</a>
-      </div>
-    </div>
+        <div class="project-card">
+            <h4 class="repo-title">Nebuli Labs Docs</h4>
+            <p class="repo-desc">A document full of all your needs for bypasses, exploits, you name it!</p>
+            <div class="btn-group">
+                <a href="https://docs.google.com/document/d/19OkAQdvproXgEJIJU9wuu0GUeKcJygttYPSFaDeP9Ig/edit?tab=t.0" target="_blank" class="btn">Launch</a>
+            </div>
+        </div>
 
+        <div class="project-card">
+            <h4 class="repo-title">Calculator</h4>
+            <p class="repo-desc">I made a calculator for myself to use in the 6th grade using AI</p>
+            <div class="btn-group">
+                <a href="https://nebulilabs.github.io/calck" target="_blank" class="btn">Launch</a>
+                <a href="https://github.com/NebuliLabs/calck" target="_blank" class="btn">Source</a>
+            </div>
+        </div>
   </div>
-
-  <script>
-    const repoData = {
-      "Nebuli OS": {
-        title: "Nebuli OS",
-        desc: "Your future OS—fast, fluid, futuristic. Open source, cloud‑ready, under your control.",
-        open: "https://nebulilabs.github.io/NebuliOS/",
-        source: "https://github.com/NebuliLabs/NebuliOS"
-      },
-      "Calck": {
-        title: "Calculator",
-        desc: "Base calculator with theme customization, a formula menu, and a monkey button that adds 69",
-        open: "https://nebulilabs.github.io/calck/",
-        source: "https://github.com/nebulilabs/calck"
-      },
-      "Music": {
-        title: "Music Player",
-        desc: "A sleek & fast music player that incudes Playlist funtionality.",
-        open: "https://nebulilabs.github.io/NebuliOS/musicplayer.html",
-        source: "https://github.com/NebuliLabs/NebuliOS/blob/main/musicplayer.html"
-      },
-      "Mynd": {
-        title: "Mynd AI",
-        desc: "A fully HTML Artificial Intelligence open for anyones use",
-        open: "https://nebulilabs.github.io/NebuliOS/mynd_ai.html",
-        source: "https://github.com/NebuliLabs/NebuliOS/blob/main/mynd_ai.html"
-      },
-      "arcade": {
-        title: "Nebuli Arcade",
-        desc: "750+ Games, all HTML powered.",
-        open: "https://nebulilabs.github.io/NebuliOS/games.html/",
-        source: "https://github.com/NebuliLabs/NebuliOS/blob/main/games.html"
-      },
-      "RSO": {
-        title: "RSO Sites",
-        desc: "My submissions to the RSO challenges.",
-        open: "https://nebulilabs.github.io/RSO/",
-        source: "https://github.com/nebulilabs/RSO"
-      }
-
-    };
-
-    const select   = document.getElementById('repoSelect');
-    const titleEl  = document.getElementById('repoTitle');
-    const descEl   = document.getElementById('repoDesc');
-    const btnOpen  = document.getElementById('btnOpen');
-    const btnSource= document.getElementById('btnSource');
-
-    function updateRepoDetails(repoName) {
-      const repo = repoData[repoName];
-      titleEl.textContent = repo.title;
-      descEl.textContent = repo.desc;
-      btnOpen.href = repo.open;
-      btnSource.href = repo.source;
-    }
-
-    select.addEventListener('change', () => {
-      updateRepoDetails(select.value);
-    });
-
-    updateRepoDetails(select.value);
-  </script>
 </body>
 </html>
